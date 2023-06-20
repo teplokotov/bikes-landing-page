@@ -1,0 +1,38 @@
+/* Fonts */
+/* Font "Inter" by Rasmus Andersson */
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../vendor/fonts/Inter/Inter-Regular.woff2?v=3.19) format("woff2"),
+       url(../vendor/fonts/Inter/Inter-Regular.woff?v=3.19) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../vendor/fonts/Inter/Inter-Medium.woff2?v=3.19) format("woff2"),
+       url(../vendor/fonts/Inter/Inter-Medium.woff?v=3.19) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../vendor/fonts/Inter/Inter-SemiBold.woff2?v=3.19) format("woff2"),
+       url(../vendor/fonts/Inter/Inter-SemiBold.woff?v=3.19) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../vendor/fonts/Inter/Inter-Bold.woff2?v=3.19) format("woff2"),
+       url(../vendor/fonts/Inter/Inter-Bold.woff?v=3.19) format("woff");
+}
