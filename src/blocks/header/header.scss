@@ -1,0 +1,30 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 28px 120px;
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 34px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #151515;
+    opacity: 1;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
