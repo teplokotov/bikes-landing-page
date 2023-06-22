@@ -1,0 +1,45 @@
+.right-side {
+  width: 100%;
+  position: relative;
+
+  &__sticky-area {
+    height: calc(100% - 79px);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__model-image-container {
+    position: sticky;
+    top: 420px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: -20px 60px 220px rgba(0,0,0,.44);
+    max-width: 440px;
+    margin-right: 50px;
+    aspect-ratio: 440 / 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__model-image {
+    width: calc(100% - 100px);
+    padding-top: 10px;
+  }
+
+  &__image-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 200px;
+  }
+
+}

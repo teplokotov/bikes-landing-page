@@ -15,3 +15,15 @@
 
 // /* Main */
 // @use "../blocks/main/main.scss";
+
+/* Welcome section */
+@use "../blocks/welcome/welcome.scss";
+
+/* Left-side of Welcome section */
+@use "../blocks/left-side/left-side.scss";
+
+/* Right-side of Welcome section */
+@use "../blocks/right-side/right-side.scss";
+
+/* UI: Button */
+@use "../blocks/button/button.scss";
