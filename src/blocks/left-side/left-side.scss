@@ -1,4 +1,4 @@
-.left-side {
+.welcome .left-side {
   margin-left: 120px;
   margin-right: 50px;
   min-width: 460px;
@@ -44,6 +44,15 @@
     color: #151515;
     max-width: fit-content;
     background-color: #F4F4F4;
+  }
+
+}
+
+.wisdom .left-side {
+
+  &__image {
+    max-width: 650px;
+    width: 100%;
   }
 
 }

@@ -19,10 +19,13 @@
 /* Welcome section */
 @use "../blocks/welcome/welcome.scss";
 
-/* Left-side of Welcome section */
+/* Wisdom section */
+@use "../blocks/wisdom/wisdom.scss";
+
+/* Left-sides */
 @use "../blocks/left-side/left-side.scss";
 
-/* Right-side of Welcome section */
+/* Right-sides */
 @use "../blocks/right-side/right-side.scss";
 
 /* UI: Button */
