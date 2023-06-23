@@ -1,0 +1,40 @@
+.control-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  &__default {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(235, 235, 235);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+
+    &:hover {
+      background-color: rgba(235, 235, 235, 0.6);
+    }
+  }
+
+  &__prev::before {
+    content: url(../images/arrow-left.svg);
+    opacity: 1;
+  }
+
+  &__prev:hover::before {
+    opacity: 0.75;
+  }
+
+  &__next::before {
+    content: url(../images/arrow-right.svg);
+    opacity: 1;
+  }
+
+  &__next:hover::before {
+    opacity: 0.75;
+  }
+
+}

@@ -1,0 +1,45 @@
+.coverings {
+  padding: 60px 0 60px 120px;
+
+  &__heading {
+    margin: 0;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+    color: #151515;
+  }
+
+  &__description {
+    margin: 0;
+    padding-top: 40px;
+    max-width: 460px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #222222;
+    opacity: 0.7;
+  }
+
+  &__slider {
+    margin-top: 85px;
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 16px;
+  }
+
+  &__slides-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 40px;
+  }
+
+  &__slides-control {
+    padding-top: 50px;
+  }
+
+}

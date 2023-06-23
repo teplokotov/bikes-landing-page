@@ -22,6 +22,9 @@
 /* Wisdom section */
 @use "../blocks/wisdom/wisdom.scss";
 
+/* Coverings section */
+@use "../blocks/coverings/coverings.scss";
+
 /* Left-sides */
 @use "../blocks/left-side/left-side.scss";
 
@@ -30,3 +33,6 @@
 
 /* UI: Button */
 @use "../blocks/button/button.scss";
+
+/* UI: Slideshow control buttons */
+@use "../blocks/control-btns/control-btns.scss";
