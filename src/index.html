@@ -67,6 +67,38 @@
           <button class="control-btns__default control-btns__next" type="button"></button>
         </div>
       </section>
+      <section class="bikes">
+        <div class="bikes__header">
+          <h2 class="bikes__heading">Велосипеды</h2>
+          <ul class="bikes__tabs">
+            <li>
+              <a class="bikes__tab bikes__tab_selected" id="tabHighway">Шоссе</a>
+            </li>
+            <li>
+              <a class="bikes__tab" id="tabGravel">Грэвел</a>
+            </li>
+            <li>
+              <a class="bikes__tab" id="tabTT">ТТ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bikes__groups">
+          <div class="bikes__group" id="tabHighway">
+            <a class="bikes__model" href="#">
+              <p class="bikes__model-name">Cervelo Caledonia-5</p>
+              <img class="bikes__model-image" src="<%=require('./images/item_1.jpg')%>" alt="Cervelo Caledonia-5">
+            </a>
+            <a class="bikes__model" href="#">
+              <p class="bikes__model-name">Cannondale Systemsix Himod</p>
+              <img class="bikes__model-image" src="<%=require('./images/item_2.jpg')%>" alt="Cannondale Systemsix Himod">
+            </a>
+            <a class="bikes__model" href="#">
+              <p class="bikes__model-name">Trek Domane SL-7</p>
+              <img class="bikes__model-image" src="<%=require('./images/item_3.jpg')%>" alt="Trek Domane SL-7">
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
   </div>
