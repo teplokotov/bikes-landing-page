@@ -8,7 +8,6 @@
   }
 
   &__heading {
-    padding-top: 5px;
     margin: 0;
     font-weight: 700;
     font-size: 55px;
@@ -66,7 +65,7 @@
 
   &__model {
     position: relative;
-    padding: 15px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     background: #F4F4F4;
     border-radius: 20px;
     filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
@@ -79,7 +78,7 @@
 
   &__model-name {
     position: absolute;
-    top: calc(100% + 20px);
+    top: calc(100% + 17px);
     left: 5px;
     margin: 0;
     font-weight: 600;

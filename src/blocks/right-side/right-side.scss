@@ -66,7 +66,7 @@
     font-size: 20px;
     line-height: 32px;
     color: #151515;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
   }
 
   &__author-subline {
@@ -76,7 +76,15 @@
     line-height: 28px;
     color: #222222;
     opacity: 0.7;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
+  }
+
+}
+
+.apps .right-side {
+
+  &__image {
+    max-height: 460px;
   }
 
 }
