@@ -31,6 +31,9 @@
 /* Apps section */
 @use "../blocks/apps/apps.scss";
 
+/* Footer */
+@use "../blocks/footer/footer.scss";
+
 /* Left-sides */
 @use "../blocks/left-side/left-side.scss";
 
@@ -42,3 +45,10 @@
 
 /* UI: Slideshow control buttons */
 @use "../blocks/control-btns/control-btns.scss";
+
+/* UI: Form */
+@use "../blocks/form/form.scss";
+
+/* UI: Theme switcher */
+@use "../blocks/theme-switcher/theme-switcher.scss";
+@use "../blocks/switcher/switcher.scss";

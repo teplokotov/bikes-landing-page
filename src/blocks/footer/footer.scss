@@ -1,0 +1,13 @@
+.footer {
+  padding: 80px 120px 60px 120px;
+  background-color: #EFEFEF;
+
+  &__page {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+}

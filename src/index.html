@@ -119,7 +119,29 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
   </div>
+  <footer class="footer">
+    <div class="footer__page">
+      <div class="footer__left-side left-side">
+        <h3 class="left-side__heading">Подпишитесь на рассылку —</h3>
+        <form class="left-side__form form">
+          <fieldset class="form__fieldset">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail"><button class="form__btn" type="submit">ok</button>
+          </fieldset>
+        </form>
+        <p class="left-side__copyright">© Road Club 2021</p>
+      </div>
+      <div class="footer__right-side right-side">
+        <div class="right-side__theme-switcher theme-switcher">
+          <img class="theme-switcher__image" src="<%=require('./images/sun.svg')%>" alt="Светлая тема">
+          <label class="switcher">
+            <input class="switcher__checkbox" type="checkbox">
+            <span class="switcher__slider"></span>
+          </label>
+          <img class="theme-switcher__image" src="<%=require('./images/moon.svg')%>" alt="Тёмная тема">
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
