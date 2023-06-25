@@ -1,6 +1,7 @@
 .welcome .right-side {
   width: 100%;
   position: relative;
+  grid-area: bike;
 
   &__sticky-area {
     height: calc(100% - 79px);
@@ -40,6 +41,32 @@
     position: absolute;
     top: 0;
     left: 200px;
+  }
+
+  @media (width < 1024px) {
+    padding-top: 40px;
+
+    &__model-image {
+      width: calc(100% - 55px);
+      padding-top: 5px;
+    }
+
+    &__model-image-container {
+      box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
+      margin-right: 50px;
+    }
+
+    &__image-container {
+      height: calc(100% - 2px);
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__image {
+      position: initial;
+      width: 90%;
+      padding-left: 30px;
+    }
   }
 
 }
