@@ -5,6 +5,14 @@
     padding-left: 120px;
   }
 
+  @media (width < 1024px) {
+    &__image {
+      max-height: none;
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
 }
 
 .apps .left-side {

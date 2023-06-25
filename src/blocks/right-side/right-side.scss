@@ -106,6 +106,27 @@
     padding-bottom: 5px;
   }
 
+  @media (width < 1024px) {
+    min-width: auto;
+    max-width: none;
+    gap: 38px;
+
+    &__quote {
+      font-size: 23px;
+      line-height: 29px;
+    }
+
+    &__author-name {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__author-subline {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+
 }
 
 .apps .right-side {
