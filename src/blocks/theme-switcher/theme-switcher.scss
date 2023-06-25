@@ -4,3 +4,12 @@
   gap: 22px;
   align-items: center;
 }
+
+.header__theme-switcher.theme-switcher {
+  display: none;
+
+  @media (width < 1024px) {
+    display: flex;
+  }
+
+}

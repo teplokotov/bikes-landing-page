@@ -27,5 +27,50 @@
     &:hover {
       opacity: 0.75;
     }
+
   }
+
+  @media (width < 1024px) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    &__nav {
+      display: flex;
+      position: absolute;
+      width: 100vw;
+      height: calc(100vh - 74px - 70px - 36px);
+      background-color: #F4F4F4;
+      gap: 64px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 74px;
+      padding-top: 70px;
+      padding-bottom: 36px;
+      overflow: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s,visibility .3s linear;
+
+      &_opened {
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 18px;
+    }
+
+  }
+
 }

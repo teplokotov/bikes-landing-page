@@ -8,17 +8,32 @@
 <body class="body">
   <div class="page">
     <header class="header">
-      <ul class="header__links">
-        <li>
-          <a class="header__link" href="#coverings">Покрытия и градиенты</a>
-        </li>
-        <li>
-          <a class="header__link" href="#bikes">Велосипеды</a>
-        </li>
-        <li>
-          <a class="header__link" href="#training">Тренировки</a>
-        </li>
-      </ul>
+      <div class="header__burger-menu burger-menu">
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li>
+            <a class="header__link" href="#coverings">Покрытия и градиенты</a>
+          </li>
+          <li>
+            <a class="header__link" href="#bikes">Велосипеды</a>
+          </li>
+          <li>
+            <a class="header__link" href="#training">Тренировки</a>
+          </li>
+        </ul>
+        <div class="header__theme-switcher theme-switcher">
+          <img class="theme-switcher__image" src="<%=require('./images/sun.svg')%>" alt="Светлая тема">
+          <label class="switcher">
+            <input class="switcher__checkbox" type="checkbox">
+            <span class="switcher__slider"></span>
+          </label>
+          <img class="theme-switcher__image" src="<%=require('./images/moon.svg')%>" alt="Тёмная тема">
+        </div>
+      </nav>
     </header>
     <main class="main">
       <section class="welcome">
