@@ -1,9 +1,11 @@
 .control-btns {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 
   &__default {
+    padding: 0;
     width: 50px;
     height: 50px;
     background-color: rgba(235, 235, 235);
@@ -20,7 +22,11 @@
   }
 
   &__prev::before {
-    content: url(../images/arrow-left.svg);
+    content: '';
+    background-image: url(../images/arrow-left.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     opacity: 1;
   }
 
@@ -29,12 +35,27 @@
   }
 
   &__next::before {
-    content: url(../images/arrow-right.svg);
+    content: '';
+    background-image: url(../images/arrow-right.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     opacity: 1;
   }
 
   &__next:hover::before {
     opacity: 0.75;
+  }
+
+  @media (width < 1024px) {
+    justify-content: flex-end;
+    gap: 10px;
+
+    &__default {
+      width: 24px;
+      height: 24px;
+    }
+
   }
 
 }

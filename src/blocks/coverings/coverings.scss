@@ -8,6 +8,7 @@
     line-height: 60px;
     letter-spacing: -0.5px;
     color: #151515;
+    grid-area: heading;
   }
 
   &__description {
@@ -19,11 +20,13 @@
     line-height: 28px;
     color: #222222;
     opacity: 0.7;
+    grid-area: description;
   }
 
   &__slider {
     margin-top: 85px;
     position: relative;
+    grid-area: slider;
   }
 
   &__label {
@@ -36,6 +39,7 @@
     flex-direction: row;
     overflow: hidden;
     gap: 40px;
+    grid-area: control;
   }
 
   &__slide {
@@ -44,6 +48,49 @@
 
   &__slides-control {
     padding-top: 50px;
+  }
+
+  @media (width < 1024px) {
+    padding: 40px 0 80px 0;
+    border-bottom: 1px solid #E3E3E3;
+    display: grid;
+    grid-template: "heading control"
+                   "slider slider"
+                   "description description";
+    grid-template-columns: 200px auto;
+
+    &__heading {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 18px;
+      padding-top: 38px;
+    }
+
+    &__slider {
+      margin-top: 40px;
+    }
+
+    &__slides-container {
+      gap: 18px;
+    }
+
+    &__slide {
+      max-width: 100%;
+    }
+
+    &__label {
+      max-width: 70px;
+      bottom: 14px;
+    }
+
+    &__slides-control {
+      padding-top: 0;
+    }
+
   }
 
 }
