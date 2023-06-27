@@ -11,8 +11,11 @@
 
   @media (width < 1024px) {
     flex-direction: column;
-    padding: 20px 0 76px 0;
-    border-bottom: 1px solid #E3E3E3;
+    padding: 20px 18px 77px 18px;
+    background-image: linear-gradient(#e3e3e3,#e3e3e3);
+    background-position: 18px 100%;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 36px) 1px;
     gap: 42px;
   }
 

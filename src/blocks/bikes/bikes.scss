@@ -16,6 +16,10 @@
     color: #151515;
   }
 
+  &__select {
+    display: none;
+  }
+
   &__tabs {
     display: flex;
     flex-direction: row;
@@ -90,6 +94,78 @@
   &__model-image {
     max-width: 340px;
     width: 100%;
+  }
+
+  &__select {
+    border: 1px solid #E3E3E3;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    color: #151515;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 14px;
+    padding: 8px 12px;
+    background-image: url(../images/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+  }
+
+  @media (width < 1024px) {
+    padding: 35px 18px 104px 18px;
+    overflow: hidden;
+    background-image: linear-gradient(#e3e3e3,#e3e3e3);
+    background-position: 18px 100%;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 36px) 1px;
+
+    &__header {
+      flex-direction: column;
+    }
+
+    &__tabs {
+      display: none;
+    }
+
+    &__heading {
+      font-size: 32px;
+      line-height: 50px;
+    }
+
+    &__select {
+      display: block;
+      margin-top: 34px;
+      max-width: 114px;
+    }
+
+    &__groups {
+      padding-top: 20px;
+    }
+
+    &__group {
+      gap: 18px;
+      width: calc(300% + 36px);
+    }
+
+    &__model {
+      width: 100%;
+      padding: 15px 15px 33px 15px;
+    }
+
+    &__model-image {
+      max-width: none;
+    }
+
+    &__model-name {
+      font-size: 14px;
+      line-height: 18px;
+      top: auto;
+      left: 0;
+      bottom: 16px;
+      text-align: center;
+      width: 100%;
+    }
+
   }
 
 }
