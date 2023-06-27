@@ -61,10 +61,38 @@
     grid-area: photo
   }
 
-
-
   @media (width < 1024px) {
     padding: 40px 18px 60px 18px;
+    grid-template: "heading"
+                   "photo"
+                   "description"
+                   "links";
+
+    &__heading {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 18px;
+      max-width: none;
+      padding-top: 40px;
+    }
+
+    &__links {
+      padding-top: 40px;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__right-side {
+      padding-top: 40px;
+    }
+
   }
 
 }

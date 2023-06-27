@@ -136,6 +136,16 @@
     padding-right: 120px;
   }
 
+  @media (width < 1024px) {
+
+    &__image {
+      max-height: none;
+      padding-right: 0;
+      width: 100%;
+    }
+
+  }
+
 }
 
 .footer .right-side {
