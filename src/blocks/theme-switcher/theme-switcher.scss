@@ -13,3 +13,12 @@
   }
 
 }
+
+.footer__theme-switcher.theme-switcher {
+  display: flex;
+
+  @media (width < 1024px) {
+    display: none;
+  }
+
+}
