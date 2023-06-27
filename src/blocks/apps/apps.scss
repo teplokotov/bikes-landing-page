@@ -61,6 +61,11 @@
     grid-area: photo
   }
 
+  &__image {
+    max-height: 460px;
+    padding-right: 120px;
+  }
+
   @media (width < 1024px) {
     padding: 40px 18px 60px 18px;
     grid-template: "heading"
@@ -91,6 +96,12 @@
 
     &__right-side {
       padding-top: 40px;
+    }
+
+    &__image {
+      max-height: none;
+      padding-right: 0;
+      width: 100%;
     }
 
   }
