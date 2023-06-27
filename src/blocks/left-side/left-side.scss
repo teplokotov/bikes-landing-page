@@ -17,53 +17,7 @@
 
 .apps .left-side {
 
-  &__header {
-    padding-top: 3px;
-  }
-
-  &__heading {
-    margin: 0;
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 60px;
-    letter-spacing: -0.5px;
-    color: #151515;
-  }
-
-  &__description {
-    margin: 0;
-    max-width: 460px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: #222222;
-    opacity: 0.7;
-    padding-top: 45px;
-  }
-
-  &__links {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0 0 7px 0;
-  }
-
-  &__link {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    color: #151515;
-    opacity: 1;
-    transition: opacity 0.1s linear;
-
-    &:hover {
-      opacity: 0.75;
-    }
-
-  }
+  
 
 }
 
