@@ -3,7 +3,7 @@
   top: 0;
   z-index: 2;
   padding: 28px 120px;
-  background: #F4F4F4;
+  background: var(--color-background-primary);
 
   &__links {
     display: flex;
@@ -20,12 +20,12 @@
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
-    color: #151515;
+    color: var(--color-text-primary);
     opacity: 1;
     transition: opacity 0.1s linear;
 
     &:hover {
-      opacity: 0.75;
+      opacity: var(--opacity-header-link-hover);
     }
 
   }
@@ -40,7 +40,7 @@
       position: absolute;
       width: 100%;
       height: calc(100vh - 74px - 70px - 36px);
-      background-color: #F4F4F4;
+      background-color: var(--color-background-primary);
       gap: 64px;
       flex-direction: column;
       align-items: center;

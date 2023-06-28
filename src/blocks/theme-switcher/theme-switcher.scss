@@ -3,6 +3,25 @@
   flex-direction: row;
   gap: 22px;
   align-items: center;
+
+  &__image {
+    &_type {
+      &_light {
+        background-color: var(--color-switcher-secondary);
+        mask-image: url(../images/sun.svg);
+        width: 28px;
+        height: 28px;
+      }
+
+      &_dark {
+        background-color: var(--color-switcher-secondary);
+        mask-image: url(../images/moon.svg);
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
 }
 
 .header__theme-switcher.theme-switcher {

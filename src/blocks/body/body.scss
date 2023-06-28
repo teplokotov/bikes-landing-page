@@ -3,9 +3,51 @@
 
 .body {
   font-family: 'Inter', 'Arial', sans-serif;
-  background-color: #F4F4F4;
+  background-color: var(--color-background-primary);
 
   &_locked {
     overflow: hidden;
+  }
+
+  &_theme {
+
+    &_light {
+      --color-background-primary: #F4F4F4;
+      --color-background-secondary: #EFEFEF;
+      --color-text-primary: #151515;
+      --color-text-secondary: #222222;
+      --color-line-model: #D7D4D4;
+      --color-control-btn-primary: #EBEBEB;
+      --color-control-btn-secondary: #EBEBEB99;
+      --color-switcher-primary: #FFFFFF;
+      --color-switcher-secondary: #CFCFCF;
+      --color-bikes-shadow-primary: #0000000f;
+      --color-bikes-shadow-secondary: #0000001c;
+      --opacity-header-link-hover: 0.75;
+      --opacity-apps-link-hover: 0.75;
+      --opacity-tab-link-selected-hover: 0.75;
+      --opacity-tab-link-hover: 0.6;
+      --opacity-arrow-hover: 0.75;
+    }
+
+    &_dark {
+      --color-background-primary: #333333;
+      --color-background-secondary: #2F2F2F;
+      --color-text-primary: #FFFFFF;
+      --color-text-secondary: #E6E6E6;
+      --color-line-model: #707070;
+      --color-control-btn-primary: #434343;
+      --color-control-btn-secondary: #43434399;
+      --color-switcher-primary: #545454;
+      --color-switcher-secondary: #676767;
+      --color-bikes-shadow-primary: #0000000f;
+      --color-bikes-shadow-secondary: #0000008c;
+      --opacity-header-link-hover: 0.65;
+      --opacity-apps-link-hover: 0.65;
+      --opacity-tab-link-selected-hover: 0.65;
+      --opacity-tab-link-hover: 0.5;
+      --opacity-arrow-hover: 0.6;
+    }
+
   }
 }

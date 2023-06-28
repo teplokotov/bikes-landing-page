@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Велосипеды</title>
 </head>
-<body class="body">
+<body class="body body_theme_light">
   <div class="page">
     <header class="header">
       <div class="header__burger-menu burger-menu">
@@ -26,12 +26,12 @@
           </li>
         </ul>
         <div class="header__theme-switcher theme-switcher">
-          <img class="theme-switcher__image" src="<%=require('./images/sun.svg')%>" alt="Светлая тема">
+          <div class="theme-switcher__image theme-switcher__image_type_light"></div>
           <label class="switcher">
             <input class="switcher__checkbox" type="checkbox">
             <span class="switcher__slider"></span>
           </label>
-          <img class="theme-switcher__image" src="<%=require('./images/moon.svg')%>" alt="Тёмная тема">
+          <div class="theme-switcher__image theme-switcher__image_type_dark"></div>
         </div>
       </nav>
     </header>
@@ -94,11 +94,13 @@
               <a class="bikes__tab" id="tabTT">ТТ</a>
             </li>
           </ul>
-          <select class="bikes__select">
-            <option value="0">Шоссе</option>
-            <option value="1">Грэвел</option>
-            <option value="2">TT</option>
-          </select>
+          <div class="bikes__select-container">
+            <select class="bikes__select">
+              <option value="0">Шоссе</option>
+              <option value="1">Грэвел</option>
+              <option value="2">TT</option>
+            </select>
+          </div>
         </div>
         <div class="bikes__groups">
           <div class="bikes__group">
@@ -144,14 +146,14 @@
       </form>
       <div class="footer__bottom-container">
         <p class="footer__copyright">© Road Club 2021</p>
-        <img class="footer__logo" src="<%=require('./images/logo.svg')%>" alt="Логотип Road Club">
+        <div class="footer__logo"></div>
         <div class="footer__theme-switcher theme-switcher">
-          <img class="theme-switcher__image" src="<%=require('./images/sun.svg')%>" alt="Светлая тема">
+          <div class="theme-switcher__image theme-switcher__image_type_light"></div>
           <label class="switcher">
             <input class="switcher__checkbox" type="checkbox">
             <span class="switcher__slider"></span>
           </label>
-          <img class="theme-switcher__image" src="<%=require('./images/moon.svg')%>" alt="Тёмная тема">
+          <div class="theme-switcher__image theme-switcher__image_type_dark"></div>
         </div>
       </div>
     </div>
