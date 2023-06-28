@@ -13,6 +13,7 @@ const switchers = document.querySelectorAll('.switcher__checkbox');
 burgerMenu.addEventListener('click', (evt) => {
   burgerMenu.classList.toggle('burger-menu_opened');
   headerNav.classList.toggle('header__nav_opened');
+  body.classList.toggle('body_locked');
 });
 
 switchers.forEach((switcher) => {
