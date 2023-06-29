@@ -40,6 +40,7 @@ const submitBtn = footerForm.querySelector('.form__btn');
 // For Burger-menu
 const burgerMenu = document.querySelector('.burger-menu');
 const headerNav = document.querySelector('.header__nav');
+const headerLinks = document.querySelectorAll('.header__link');
 
 // For Theme-switcher
 const switchers = document.querySelectorAll('.switcher__checkbox');
@@ -59,14 +60,17 @@ const tabPages = document.querySelectorAll('.bikes__groups');
 const bikesSelect = document.querySelector('.bikes__select');
 tabPages[0].style.display = 'block';
 
-burgerMenu.addEventListener('click', (evt) => {
+burgerMenu.addEventListener('click', () => switchMenu());
+
+headerLinks.forEach((headerLink) => {
+  headerLink.addEventListener('click', () => switchMenu());
+});
+
+function switchMenu() {
   burgerMenu.classList.toggle('burger-menu_opened');
   headerNav.classList.toggle('header__nav_opened');
   body.classList.toggle('body_locked');
-});
-
-submitBtn.style.color = '#ffffff00';
-emailInput.addEventListener('click', () => submitBtn.removeAttribute('style'));
+}
 
 switchers.forEach((switcher) => {
   switcher.addEventListener('change', (evt) => {
@@ -83,6 +87,9 @@ switchers.forEach((switcher) => {
     }
   });
 });
+
+submitBtn.style.color = '#ffffff00';
+emailInput.addEventListener('click', () => submitBtn.removeAttribute('style'));
 
 footerForm.addEventListener('submit', handleSubmitForm);
 
