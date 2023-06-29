@@ -17,3 +17,4 @@
 - TinyPNG
 - Webpack 5
 - SCSS
+- Swiper JS
