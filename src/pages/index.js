@@ -65,6 +65,9 @@ burgerMenu.addEventListener('click', (evt) => {
   body.classList.toggle('body_locked');
 });
 
+submitBtn.style.color = '#ffffff00';
+emailInput.addEventListener('click', () => submitBtn.removeAttribute('style'));
+
 switchers.forEach((switcher) => {
   switcher.addEventListener('change', (evt) => {
     if (evt.target.checked) {
