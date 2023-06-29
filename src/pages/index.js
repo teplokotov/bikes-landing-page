@@ -15,6 +15,12 @@ const headerNav = document.querySelector('.header__nav');
 // For Theme-switcher
 const switchers = document.querySelectorAll('.switcher__checkbox');
 
+// For Bikes section
+const tabs = document.querySelectorAll('.bikes__tabs li a');
+const tabPages = document.querySelectorAll('.bikes__groups');
+const bikesSelect = document.querySelector('.bikes__select');
+tabPages[0].style.display = 'block';
+
 burgerMenu.addEventListener('click', (evt) => {
   burgerMenu.classList.toggle('burger-menu_opened');
   headerNav.classList.toggle('header__nav_opened');
@@ -46,4 +52,32 @@ function handleSubmitForm(evt) {
     emailInput.value = 'Круто!';
     emailInput.disabled = true;
   }
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener('click', (evt) => {
+    if (!evt.target.classList.contains('bikes__tab_selected')) {
+      tabs.forEach((item) => item.classList.remove('bikes__tab_selected'));
+      evt.target.classList.add('bikes__tab_selected');
+      bikesSelect.value = evt.target.dataset['id'];
+    }
+    tabPages.forEach((item) => {
+      item.style.display = item.id === evt.target.dataset['id'] ? 'block' : 'none';
+    });
+  });
+});
+
+bikesSelect.addEventListener('change', handleBikesSelect);
+
+function handleBikesSelect(evt) {
+  tabs.forEach((item) => {
+    if (item.dataset['id'] === evt.target.value) {
+      item.classList.add('bikes__tab_selected');
+    } else {
+      item.classList.remove('bikes__tab_selected');
+    }
+  });
+  tabPages.forEach((item) => {
+    item.style.display = item.id === evt.target.value ? 'block' : 'none';
+  });
 }
