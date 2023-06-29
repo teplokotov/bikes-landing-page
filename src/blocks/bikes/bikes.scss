@@ -127,7 +127,7 @@
   }
 
   @media (width < 1024px) {
-    padding: 35px 18px 104px 18px;
+    padding: 35px 18px 68px 18px;
     overflow: hidden;
     background-image: linear-gradient(#e3e3e3,#e3e3e3);
     background-position: 18px 100%;
@@ -154,16 +154,31 @@
 
     &__groups {
       padding-top: 20px;
+      // --
+      filter: drop-shadow(0px 20px 140px var(--color-bikes-shadow-primary));
+      &:hover {
+        filter: drop-shadow(0px 20px 140px var(--color-bikes-shadow-secondary));
+      }
     }
 
     &__group {
-      gap: 18px;
-      width: calc(300% + 36px);
+      // gap: 18px;
+      // width: calc(300% + 36px);
+      gap: 0;
+      width: auto;
+      margin-bottom: 36px;
     }
 
     &__model {
-      width: 100%;
+      //width: 100%;
+      // padding: 15px 15px 33px 15px;
+      // -----
+      width: calc(100% - 30px);
       padding: 15px 15px 33px 15px;
+      filter: none;
+      &:hover {
+        filter: none;
+      }
     }
 
     &__model-image {

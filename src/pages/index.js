@@ -10,7 +10,7 @@ const SVGLabels = {
 }
 
 // Swiper JS
-import Swiper from 'swiper';
+import Swiper, { Pagination } from 'swiper';
 
 // Styles
 import './index.scss';
@@ -120,7 +120,7 @@ function handleBikesSelect(evt) {
   });
 }
 
-const swiper = new Swiper('.coverings__slider', {
+const swiperCoverings = new Swiper('.coverings__slider', {
   slidesPerView: 1,
   spaceBetween: 18,
   loop: 'true',
@@ -137,8 +137,8 @@ const swiper = new Swiper('.coverings__slider', {
   },
 });
 
-btnNext.addEventListener('click', () => swiper.slideNext());
-btnPrev.addEventListener('click', () => swiper.slidePrev());
+btnNext.addEventListener('click', () => swiperCoverings.slideNext());
+btnPrev.addEventListener('click', () => swiperCoverings.slidePrev());
 
 function drawDescription() {
   const activeSlide = document.querySelector('.swiper-slide-active');
@@ -154,3 +154,74 @@ function drawDescription() {
 function increaseNumOFSlides() {
   slides.forEach((slide) => slidesContainer.append(slide.cloneNode(true)));
 }
+
+function addSwiperSelector() {
+  tabPages.forEach((tabPage) => {
+    tabPage.classList.add('swiper');
+    const tabGroup = tabPage.querySelector('.bikes__group');
+    tabGroup.classList.add('swiper-wrapper');
+    const tabSlides = tabGroup.querySelectorAll('.bikes__model');
+    tabSlides.forEach((tabSlide) => {
+      tabSlide.classList.add('swiper-slide');
+      tabSlide.style.marginRight = '30px';
+    });
+  });
+}
+
+function removeSwiperSelector() {
+  tabPages.forEach((tabPage) => {
+    tabPage.classList.remove('swiper');
+    const tabGroup = tabPage.querySelector('.bikes__group');
+    tabGroup.classList.remove('swiper-wrapper');
+    const tabSlides = tabGroup.querySelectorAll('.bikes__model');
+    tabSlides.forEach((tabSlide) => {
+      tabSlide.classList.remove('swiper-slide');
+      tabSlide.style.marginRight = '0';
+    });
+  });
+}
+
+const swiperBikes = new Swiper('#tabHighway', {
+  modules: [Pagination],
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+const swiperGravel = new Swiper('#tabGravel', {
+  modules: [Pagination],
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+const swiperTT = new Swiper('#tabTT', {
+  modules: [Pagination],
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+window.addEventListener("resize", updateSize);
+
+function updateSize() {
+  if(window.innerWidth < 1024) {
+    addSwiperSelector();
+    swiperBikes.enable();
+    swiperGravel.enable();
+    swiperTT.enable();
+  } else {
+    swiperBikes.disable();
+    swiperGravel.disable();
+    swiperTT.disable();
+    removeSwiperSelector();
+  }
+}
+updateSize();
