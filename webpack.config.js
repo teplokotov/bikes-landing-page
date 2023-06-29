@@ -40,11 +40,6 @@ module.exports = {
           },
           'postcss-loader', {
             loader: 'sass-loader',
-            options: {
-              sassOptions: {
-                includePaths: ['src/scss'],
-              },
-            },
           },
         ]
       },

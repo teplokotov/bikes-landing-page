@@ -1,6 +1,3 @@
-@use "../../scss/variables" as *;
-@use "../../scss/mixins";
-
 .body {
   font-family: 'Inter', 'Arial', sans-serif;
   background-color: var(--color-background-primary);
@@ -28,7 +25,6 @@
       --opacity-tab-link-selected-hover: 0.75;
       --opacity-tab-link-hover: 0.6;
       --opacity-arrow-hover: 0.75;
-
       --swiper-pagination-color: #151515;
       --swiper-pagination-bullet-inactive-color: #CACACA;
       --swiper-pagination-bullet-inactive-opacity: 1;
@@ -54,7 +50,6 @@
       --opacity-tab-link-selected-hover: 0.65;
       --opacity-tab-link-hover: 0.5;
       --opacity-arrow-hover: 0.6;
-
       --swiper-pagination-color: #FFFFFF;
       --swiper-pagination-bullet-inactive-color: #CACACA;
       --swiper-pagination-bullet-inactive-opacity: 1;

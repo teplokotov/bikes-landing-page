@@ -2,7 +2,7 @@
 @use "../vendor/normalize";
 
 /* Swiper styles */
-@use "../../node_modules/swiper/swiper-bundle.css";
+@use "../../node_modules/swiper/swiper-bundle";
 
 /* Fonts */
 @use "../vendor/fonts";
@@ -14,41 +14,41 @@
 @use "../blocks/body/body";
 
 /* Page block */
-@use "../blocks/page/page.scss";
+@use "../blocks/page/page";
 
 /* Header */
-@use "../blocks/header/header.scss";
+@use "../blocks/header/header";
 
 /* Welcome section */
-@use "../blocks/welcome/welcome.scss";
+@use "../blocks/welcome/welcome";
 
 /* Wisdom section */
-@use "../blocks/wisdom/wisdom.scss";
+@use "../blocks/wisdom/wisdom";
 
 /* Coverings section */
-@use "../blocks/coverings/coverings.scss";
+@use "../blocks/coverings/coverings";
 
 /* Bikes section */
-@use "../blocks/bikes/bikes.scss";
+@use "../blocks/bikes/bikes";
 
 /* Apps section */
-@use "../blocks/apps/apps.scss";
+@use "../blocks/apps/apps";
 
 /* Footer */
-@use "../blocks/footer/footer.scss";
+@use "../blocks/footer/footer";
 
 /* UI: Button */
-@use "../blocks/button/button.scss";
+@use "../blocks/button/button";
 
 /* UI: Slideshow control buttons */
-@use "../blocks/control-btns/control-btns.scss";
+@use "../blocks/control-btns/control-btns";
 
 /* UI: Form */
-@use "../blocks/form/form.scss";
+@use "../blocks/form/form";
 
 /* UI: Theme switcher */
-@use "../blocks/theme-switcher/theme-switcher.scss";
-@use "../blocks/switcher/switcher.scss";
+@use "../blocks/theme-switcher/theme-switcher";
+@use "../blocks/switcher/switcher";
 
 /* UI: Burger menu */
-@use "../blocks/burger-menu/burger-menu.scss";
+@use "../blocks/burger-menu/burger-menu";
