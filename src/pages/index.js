@@ -1,5 +1,34 @@
+// Images
+import HighwayLabel from '../images/highway-label.svg';
+import GravelLabel from '../images/gravel-label.svg';
+import TTLabel from '../images/TT-label.svg';
+
+const SVGLabels = {
+  'Highway': HighwayLabel,
+  'Gravel': GravelLabel,
+  'TT': TTLabel
+}
+
+// Swiper JS
+import Swiper from 'swiper';
+
 // Styles
 import './index.scss';
+
+const coveringsData = {
+  'Highway': {
+    'title': 'Шоссе',
+    'description': 'На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.',
+  },
+  'Gravel': {
+    'title': 'Грэвел',
+    'description': 'Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.',
+  },
+  'TT': {
+    'title': 'ТТ',
+    'description': 'ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.',
+  },
+}
 
 const body = document.querySelector('.body');
 
@@ -14,6 +43,15 @@ const headerNav = document.querySelector('.header__nav');
 
 // For Theme-switcher
 const switchers = document.querySelectorAll('.switcher__checkbox');
+
+// For Coverings section
+const coveringsHeading = document.querySelector('.coverings__heading');
+const coveringsDescription = document.querySelector('.coverings__description');
+const slidesContainer = document.querySelector('.coverings__slides-container');
+const coveringsLabel = document.querySelector('.coverings__label');
+const slides = document.querySelectorAll('.coverings__slide');
+const btnPrev = document.querySelector('.control-btns__prev');
+const btnNext = document.querySelector('.control-btns__next');
 
 // For Bikes section
 const tabs = document.querySelectorAll('.bikes__tabs li a');
@@ -80,4 +118,39 @@ function handleBikesSelect(evt) {
   tabPages.forEach((item) => {
     item.style.display = item.id === evt.target.value ? 'block' : 'none';
   });
+}
+
+const swiper = new Swiper('.coverings__slider', {
+  slidesPerView: 1,
+  spaceBetween: 18,
+  loop: 'true',
+  on: {
+    init: () => increaseNumOFSlides(),
+    slideNextTransitionEnd: () => drawDescription(),
+    slidePrevTransitionEnd: () => drawDescription(),
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 'auto',
+      spaceBetween: 40
+    },
+  },
+});
+
+btnNext.addEventListener('click', () => swiper.slideNext());
+btnPrev.addEventListener('click', () => swiper.slidePrev());
+
+function drawDescription() {
+  const activeSlide = document.querySelector('.swiper-slide-active');
+  const id = activeSlide.dataset['id'];
+  // Title and description
+  coveringsHeading.textContent = coveringsData[id]['title'];
+  coveringsDescription.textContent = coveringsData[id]['description'];
+  // Label
+  coveringsLabel.src = SVGLabels[id];
+}
+
+// Fix for Swiper's loop: https://swiperjs.com/swiper-api#param-loop
+function increaseNumOFSlides() {
+  slides.forEach((slide) => slidesContainer.append(slide.cloneNode(true)));
 }

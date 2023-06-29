@@ -32,13 +32,12 @@
   &__label {
     position: absolute;
     bottom: 16px;
+    z-index: 2;
   }
 
   &__slides-container {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
-    gap: 40px;
     grid-area: control;
   }
 
@@ -75,10 +74,6 @@
 
     &__slider {
       margin-top: 40px;
-    }
-
-    &__slides-container {
-      gap: 18px;
     }
 
     &__slide {

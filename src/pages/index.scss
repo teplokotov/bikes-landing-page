@@ -1,6 +1,9 @@
 /* Normalize.css */
 @use "../vendor/normalize";
 
+/* Swiper styles */
+@use "../../node_modules/swiper/swiper.scss";
+
 /* Fonts */
 @use "../vendor/fonts";
 
