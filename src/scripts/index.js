@@ -13,7 +13,7 @@ const SVGLabels = {
 import Swiper, { Pagination } from 'swiper';
 
 // Styles
-import './index.scss';
+import '../scss/index.scss';
 
 const coveringsData = {
   'Highway': {
