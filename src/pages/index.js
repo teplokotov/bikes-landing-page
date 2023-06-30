@@ -31,6 +31,7 @@ const coveringsData = {
 }
 
 const body = document.querySelector('.body');
+const welcomeButton = document.querySelector('.welcome__button');
 
 // For E-mail form
 const footerForm = document.querySelector('.footer__form');
@@ -235,3 +236,7 @@ function updateSize() {
   }
 }
 updateSize();
+
+welcomeButton.addEventListener('click', () => {
+  location.href = "#wisdom";
+});
