@@ -13,7 +13,7 @@ const SVGLabels = {
 import Swiper, { Pagination } from 'swiper';
 
 // Styles
-import './index.scss';
+import '../scss/index.scss';
 
 const coveringsData = {
   'Highway': {
@@ -31,6 +31,7 @@ const coveringsData = {
 }
 
 const body = document.querySelector('.body');
+const welcomeButton = document.querySelector('.welcome__button');
 
 // For E-mail form
 const footerForm = document.querySelector('.footer__form');
@@ -67,9 +68,11 @@ headerLinks.forEach((headerLink) => {
 });
 
 function switchMenu() {
-  burgerMenu.classList.toggle('burger-menu_opened');
-  headerNav.classList.toggle('header__nav_opened');
-  body.classList.toggle('body_locked');
+  if (window.innerWidth < 1024) {
+    body.classList.toggle('body_locked');
+    burgerMenu.classList.toggle('burger-menu_opened');
+    headerNav.classList.toggle('header__nav_opened');
+  }
 }
 
 switchers.forEach((switcher) => {
@@ -222,7 +225,7 @@ const swiperTT = new Swiper('#tabTT', {
 window.addEventListener("resize", updateSize);
 
 function updateSize() {
-  if(window.innerWidth < 1024) {
+  if (window.innerWidth < 1024) {
     addSwiperSelector();
     swiperBikes.enable();
     swiperGravel.enable();
@@ -232,6 +235,13 @@ function updateSize() {
     swiperGravel.disable();
     swiperTT.disable();
     removeSwiperSelector();
+    body.classList.remove('body_locked');
+    burgerMenu.classList.remove('burger-menu_opened');
+    headerNav.classList.remove('header__nav_opened');
   }
 }
 updateSize();
+
+welcomeButton.addEventListener('click', () => {
+  location.href = "#wisdom";
+});

@@ -1,3 +1,5 @@
+@use "../../scss/mixins";
+
 .bikes {
   padding: 70px 120px 104px 120px;
 
@@ -8,12 +10,7 @@
   }
 
   &__heading {
-    margin: 0;
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 60px;
-    letter-spacing: -0.5px;
-    color: var(--color-text-primary);
+    @include mixins.heading;
   }
 
   &__tabs {
@@ -154,7 +151,6 @@
 
     &__groups {
       padding-top: 20px;
-      // --
       filter: drop-shadow(0px 20px 140px var(--color-bikes-shadow-primary));
       &:hover {
         filter: drop-shadow(0px 20px 140px var(--color-bikes-shadow-secondary));

@@ -1,26 +1,18 @@
+@use "../../scss/mixins";
+
 .coverings {
   padding: 70px 0 50px 120px;
 
   &__heading {
-    margin: 0;
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 60px;
-    letter-spacing: -0.5px;
-    color: var(--color-text-primary);
     grid-area: heading;
+
+    @include mixins.heading;
   }
 
   &__description {
-    margin: 0;
-    padding-top: 45px;
-    max-width: 460px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: var(--color-text-secondary);
-    opacity: 0.7;
     grid-area: description;
+
+    @include mixins.description(0, 45px 0 0 0);
   }
 
   &__slider {
