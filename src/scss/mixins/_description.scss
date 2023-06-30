@@ -1,0 +1,10 @@
+@mixin description($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  max-width: 460px;
+}
