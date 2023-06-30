@@ -68,9 +68,11 @@ headerLinks.forEach((headerLink) => {
 });
 
 function switchMenu() {
-  burgerMenu.classList.toggle('burger-menu_opened');
-  headerNav.classList.toggle('header__nav_opened');
-  if (window.innerWidth < 1024) body.classList.toggle('body_locked');
+  if (window.innerWidth < 1024) {
+    body.classList.toggle('body_locked');
+    burgerMenu.classList.toggle('burger-menu_opened');
+    headerNav.classList.toggle('header__nav_opened');
+  }
 }
 
 switchers.forEach((switcher) => {
@@ -233,6 +235,9 @@ function updateSize() {
     swiperGravel.disable();
     swiperTT.disable();
     removeSwiperSelector();
+    body.classList.remove('body_locked');
+    burgerMenu.classList.remove('burger-menu_opened');
+    headerNav.classList.remove('header__nav_opened');
   }
 }
 updateSize();
