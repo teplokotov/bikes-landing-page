@@ -70,7 +70,7 @@ headerLinks.forEach((headerLink) => {
 function switchMenu() {
   burgerMenu.classList.toggle('burger-menu_opened');
   headerNav.classList.toggle('header__nav_opened');
-  body.classList.toggle('body_locked');
+  if (window.innerWidth < 1024) body.classList.toggle('body_locked');
 }
 
 switchers.forEach((switcher) => {
@@ -223,7 +223,7 @@ const swiperTT = new Swiper('#tabTT', {
 window.addEventListener("resize", updateSize);
 
 function updateSize() {
-  if(window.innerWidth < 1024) {
+  if (window.innerWidth < 1024) {
     addSwiperSelector();
     swiperBikes.enable();
     swiperGravel.enable();
