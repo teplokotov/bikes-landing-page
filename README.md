@@ -8,7 +8,7 @@
 [![Webpack](https://img.shields.io/badge/webpack-2b3a42.svg?style=for-the-badge&logo=webpack&logoColor=84c7e8)](https://webpack.js.org/)
 [![Swiper](https://img.shields.io/badge/swiper-e9eefa.svg?style=for-the-badge&logo=swiper&logoColor=0080ff)](https://swiperjs.com/)
 
-![image](https://github.com/teplokotov/bikes-landing-page/assets/118915923/bd5a111c-d926-4fd9-87d2-60c7620fc470)
+[![image](https://github.com/teplokotov/bikes-landing-page/assets/118915923/bd5a111c-d926-4fd9-87d2-60c7620fc470)](https://teplokotov.github.io/bikes-landing-page/)
 
 «Bikes» — это одностраничный адаптивный веб-сайт для Sigma Sports на базе Практикума.<br>Сайт предоставляет информацию об актуальных моделях велосипедов в зависимости от характера покрытия. Дизайн веб-сайта выполнен в минималистичном стиле, что позволяет пользователю сосредоточиться на информации о продуктах.
 Для удобства пользователей сайт поддерживает все современные браузеры и мобильные устройства, обеспечивая адаптивную верстку.
